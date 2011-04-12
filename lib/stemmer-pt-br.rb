@@ -1,18 +1,15 @@
-/*
- * A stemmer for the portuguese language written in ruby.
- *
- * It has been ported from the following perl implementation:
- * http://search.cpan.org/src/XERN/Lingua-PT-Stemmer-0.01/lib/Lingua/PT/Stemmer.pm
- * 
- * More information on this algortihm can be found at:
- * http://www.cs.mdx.ac.uk/research/PhDArea/rslp/RSLP.htm
- *
- * If you find any bugs, please contact me at dpr [at] cin.ufpe.br
- *
- * Hope you enjoy it!
- * Davi Pires
- *
- */
+ # A stemmer for the portuguese language written in ruby.
+ 
+ # It has been ported from the following perl implementation:
+ # http://search.cpan.org/src/XERN/Lingua-PT-Stemmer-0.01/lib/Lingua/PT/Stemmer.pm
+  
+ # More information on this algortihm can be found at:
+ # http://www.cs.mdx.ac.uk/research/PhDArea/rslp/RSLP.htm
+ 
+ # If you find any bugs, please contact me at dpr [at] cin.ufpe.br
+ 
+ # Hope you enjoy it!
+ # Davi Pires
 
 class StemmerPTBR
 
