@@ -49,13 +49,13 @@ class StemmerPTBR
     };
     
     @rule["augment"] = {
-        "díssimo"     => [ 5, '' ],
+        "díssimo"     => [ 5,'' ],
         "abilíssimo"  => [ 5,'' ],
         "íssimo"      => [ 3,'' ],
         "ésimo"       => [ 3,'' ],
         "érrimo"      => [ 4,'' ],
         "zinho"       => [ 2,'' ],
-        "quinho"      => [ 4, "c" ],
+        "quinho"      => [ 4,'c'],
         "uinho"       => [ 4,'' ],
         "adinho"      => [ 3,'' ],
         "inho"        => [ 3,'' ],
@@ -86,12 +86,12 @@ class StemmerPTBR
         "ivo"         => [ 4, '' ],
         "ado"         => [ 2, '' ],
         "ido"         => [ 3, '' ],
-        "ador"        => [ 3,'' ],
+        "ador"        => [ 3, '' ],
         "edor"        => [ 3, '' ],
         "idor"        => [ 4, '' ],
         "atória"      => [ 5, '' ],
         "or"          => [ 2, '' ],
-        "abilidade"   => [ 5,'' ],
+        "abilidade"   => [ 5, '' ],
         "icionista"   => [ 4, '' ],
         "cionista"    => [ 5, '' ],
         "ional"       => [ 4, '' ],
@@ -247,14 +247,25 @@ class StemmerPTBR
   end  
   
   def stem(term)
+    #apply_rule("plural", term) if term =~ /s$/
+    #apply_rule("femin", term) if term =~ /a$/
+    #apply_rule("augment", term)
+    #apply_rule("adverb", term)
+    #apply_rule("noun", term)
+    #apply_rule("verb", term)
+    #apply_rule("vowel", term)  
+    #apply_rule("accent", term, false)  
+    apply_rule("accent", term, false)  
     apply_rule("plural", term) if term =~ /s$/
-    apply_rule("femin", term) if term =~ /a$/
-    apply_rule("augment", term)
-    apply_rule("adverb", term)
+  
     apply_rule("noun", term)
     apply_rule("verb", term)
-    apply_rule("vowel", term)  
-    apply_rule("accent", term, false)  
+    apply_rule("adverb", term)
+    apply_rule("augment", term)
+    
+    apply_rule("femin", term) if term =~ /a$/
+    apply_rule("vowel", term)
+    
     return term
   end
   
